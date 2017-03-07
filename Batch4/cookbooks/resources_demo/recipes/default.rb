@@ -6,7 +6,9 @@
 
 webserver_package = node['webserver']['package']
 
-package webserver_package
+package webserver_package do
+  action :install
+end
 
 service webserver_package do
   action [:enable, :start]
